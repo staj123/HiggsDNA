@@ -38,10 +38,9 @@ without applying the normalizing flow correction to photons :
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
 
 
-#################################################################################################
+##################################################################################################
 with applying the normalizing flow correction to photons :
-################################################################################################
-
+##################################################################################################
 4. to produce zmmy ntuples after  applying shower shape and isolation corrections to photons.
 
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --doFlow_corrections --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
@@ -56,7 +55,6 @@ Then also the final parquet file can be converted to .root format using the scri
 
 6. python parquet_converter2.py -i output.parquet -o output.root
 
+##################################################################################################
+After producing the ntuples from Zmmy processor, We need to apply low mass photon preselections. ##################################################################################################
 
-###################################################################
-After producing the ntuples from Zmmy processor, We need to apply low mass photon preselections. 
-###################################################################
