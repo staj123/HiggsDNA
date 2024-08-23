@@ -15,7 +15,7 @@ cd HiggsDNA
 git pull
 
 
-# get authentication for Grid  to access the datasets remotely :
+1. get authentication for Grid  to access the datasets remotely :
 
 voms-proxy-init -voms cms --valid 192:00
 
@@ -24,7 +24,7 @@ voms-proxy-init -voms cms --valid 192:00
 photon_selections.py
  
 #modify the base.py(HiggsDNA/higgs_dna/workflows/base.py) file using the pT cuts for low mass below: 
-# diphoton preselection cuts                                                                                                                                                                               
+2. diphoton preselection cuts                                                                                                                                                                               
 self.min_pt_photon = 18.0
 self.min_pt_lead_photon = 30.0
 
@@ -32,7 +32,7 @@ self.min_pt_lead_photon = 30.0
 without applying the normalizing flow correction to photons :
 ##################################################################################################
 
-# to produce zmmy ntuples before applying shower shape and isolation corrections to photons.
+3. to produce zmmy ntuples before applying shower shape and isolation corrections to photons.
 
 #Processing the files
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
@@ -42,7 +42,7 @@ python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --d
 with applying the normalizing flow correction to photons :
 ################################################################################################
 
-# to produce zmmy ntuples after  applying shower shape and isolation corrections to photons.
+4. to produce zmmy ntuples after  applying shower shape and isolation corrections to photons.
 
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --doFlow_corrections --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
 ##############################################################
@@ -50,11 +50,11 @@ python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --d
 All the above steps produce the zmmy ntuples in parquet files found in the output folder created in the end.
 You can merge the output parquet files inside the output_folder into a single parquet file for analysis using the script below.
 
-python merge_parquet.py -i output_folder/ -o output.parquet
+5. python merge_parquet.py -i output_folder/ -o output.parquet
 
 Then also the final parquet file can be converted to .root format using the script below.
 
-python parquet_converter2.py -i output.parquet -o output.root
+6. python parquet_converter2.py -i output.parquet -o output.root
 
 
 ###################################################################
