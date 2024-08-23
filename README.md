@@ -43,7 +43,7 @@ with applying the normalizing flow correction to photons :
 ################################################################################################
 
 # to produce zmmy ntuples after  applying shower shape and isolation corrections to photons.
-# for MC
+
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --doFlow_corrections --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
 ##############################################################
 
