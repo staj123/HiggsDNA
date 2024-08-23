@@ -5,7 +5,7 @@
 
 https://higgs-dna.readthedocs.io/en/latest/installation.html
 
-#Steps for Validation studies:
+# Steps for validation studies 
 
 #####################################################################################################
 The Z(\mu \mu \gamma) processors test the single photon from Z \rightarrow \mu \mu final state radiation (FSR). There is a  processor for ntuplizing ZmmyProcessor, a processor for generating histograms ZmmyHist, and a processor ZmmyZptHist for generating Zpt distribution to derive Zpt reweighting.
