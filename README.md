@@ -1,6 +1,6 @@
 # lowmass_HiggsDNA
 ####################################################################################################
-#HiggsDNA Installation (Follow the instructions here 
+# HiggsDNA Installation (Follow the instructions here) 
 #####################################################################################################
 
 https://higgs-dna.readthedocs.io/en/latest/installation.html
