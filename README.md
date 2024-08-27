@@ -56,7 +56,6 @@ Then also the final parquet file can be converted to .root format using the scri
 
 6. python parquet_converter2.py -i output.parquet -o output.root
 
-####################################################################################################
-After producing the ntuples from Zmmy processor, We need to apply low mass photon preselections.
-####################################################################################################
+
+After producing the ntuples from Zmmy processor, We need to apply low-mass photon preselections.
 
