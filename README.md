@@ -1,16 +1,16 @@
 # lowmass_HiggsDNA
-####################################################################################################
+######################################################
 # HiggsDNA Installation (Follow the instructions here) 
-#####################################################################################################
+######################################################
 
 https://higgs-dna.readthedocs.io/en/latest/installation.html
 
 # Steps for validation studies 
 
-########################################################################################################
+#######################################################
 The Z(\mu \mu \gamma) processors test the single photon from Z \rightarrow \mu \mu final state radiation (FSR). There is a  processor for ntuplizing ZmmyProcessor, a processor for generating histograms ZmmyHist, and a processor ZmmyZptHist for generating Zpt distribution to derive Zpt reweighting.
 
-########################################################################################################
+#######################################################
 cd HiggsDNA
 git pull
 
@@ -28,10 +28,10 @@ photon_selections.py
 self.min_pt_photon = 18.0
 self.min_pt_lead_photon = 30.0
 
-####################################################################################################
+##########################################################
 
 without applying the normalizing flow correction to photons :
-####################################################################################################
+##########################################################
 
 
 3. to produce zmmy ntuples before applying shower shape and isolation corrections to photons.
@@ -40,13 +40,13 @@ without applying the normalizing flow correction to photons :
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
 
 
-####################################################################################################                                                                               
+########################################################                                                                              
 with applying the normalizing flow correction to photons :
-#######################################################################################################
+########################################################
 4. to produce zmmy ntuples after  applying shower shape and isolation corrections to photons.
 
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --doFlow_corrections --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
-####################################################################################################
+########################################################
 
 
 All the above steps produce the zmmy ntuples in parquet files found in the output folder created in the end.
