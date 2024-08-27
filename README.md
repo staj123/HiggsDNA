@@ -14,24 +14,23 @@ The Z(\mu \mu \gamma) processors test the single photon from Z \rightarrow \mu \
 cd HiggsDNA
 git pull
 
-
 1. get authentication for Grid  to access the datasets remotely :
 
 voms-proxy-init -voms cms --valid 192:00
 
 
-#Replace the photon preselection file here (HiggsDNA/higgs_dna/selections/) to the new lowmass preselection : copy and paste the new file
+# Replace the photon preselection file here (HiggsDNA/higgs_dna/selections/) to the new lowmass preselection : copy and paste the new file
 photon_selections.py
  
-#modify the base.py(HiggsDNA/higgs_dna/workflows/base.py) file using the pT cuts for low mass below: 
+# modify the base.py(HiggsDNA/higgs_dna/workflows/base.py) file using the pT cuts for low mass below: 
 2. diphoton preselection cuts                                                                                                                                                                               
 self.min_pt_photon = 18.0
 self.min_pt_lead_photon = 30.0
 
-##########################################################
 
-without applying the normalizing flow correction to photons :
-##########################################################
+
+# without applying the normalizing flow correction to photons :
+
 
 
 3. to produce zmmy ntuples before applying shower shape and isolation corrections to photons.
@@ -40,13 +39,12 @@ without applying the normalizing flow correction to photons :
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
 
 
-########################################################                                                                              
-with applying the normalizing flow correction to photons :
-########################################################
+                                                                             
+# with applying the normalizing flow correction to photons :
+
 4. to produce zmmy ntuples after  applying shower shape and isolation corrections to photons.
 
 python ../scripts/run_analysis.py --json-analysis (path to runner.json file) --doFlow_corrections --dump (path to parquet file processing location) --executor futures --save (save it in coffea file)
-########################################################
 
 
 All the above steps produce the zmmy ntuples in parquet files found in the output folder created in the end.
